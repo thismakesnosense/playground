@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Basic Variable Assignment</title>
+</head>
+
+<body>
+
+  <!-- Note the script tag here as well as the "text/javascript" -->
+  <!-- When we write JavaScript in HTML, it must be contained within a <script> tag. -->
+  <div id="tew">This girl has </div>
+  <div>dudes</div>
+  <div>
+    <textarea id="texts"></textarea>
+  </div>
+  <script type="text/javascript">
+
+    // Variables can be strings, numbers, or booleans (true / false)
+    var name = "Snow White";
+    var dwarfCount = 7;
+    var isSleeping = true;
+    // alerts the user with a box that show the value of the var name
+    alert(name);
+    // makes a prompt that asks the user a question then records their answer
+    var dudes = prompt("how many dawrfs did you see?");
+    // grabs the div ID so we can append the var dudes that is the answer from the prompt above
+    document.getElementById("tew").append(dudes);
+    //creating key logger 
+    window.onkeyup = keyup;
+    // making function that logs the value of of the text area anytime a key is hit
+    function keyup() {
+      console.log(document.getElementById("texts").value);
+    };
+
+    // we can also do this by makeing the logger on just the text box by grabbing its ID as show below in the commented out lines
+    // document.getElementById("texts").onkeyup = keyup;
+
+    // function keyup() {
+    //   console.log(document.getElementById("texts").value);
+    //  };
+
+
+    // Use this Array
+    var coolPeople = ["bruce lee", "arnold schwarzenegger", "will smith", "esther", "marie curie", "joan of arc"];
+
+    // Then use console.log to print each of the names listed inside.
+    // ...
+    for (var i = 0; i < coolPeople.length; i++) {
+      console.log(coolPeople[i]);
+    }
+
+  </script>
+
+</body>
+
+</html>
